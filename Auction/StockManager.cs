@@ -32,15 +32,31 @@ namespace Auction
             Products.Add(product);
         }    
 
-       
+       /// <summary>
+       /// 
+       /// </summary>
+       /// <param name="id"></param>
+       /// <returns></returns>
         public Product FindById(int id)
         {
+           foreach(Product product in Products )
+            {
+                if(product.ID == id)
+                {
+                    return product;
+                }
+               
 
+            }
+            // if reached here no product matches so throw an eception
+            throw new ArgumentException("No product by that id");
         }
 
 
 
-
+        /// <summary>
+        /// Read only property that returns this list 
+        /// </summary>
         public List<Product> Products
         {
             get { return products;}
