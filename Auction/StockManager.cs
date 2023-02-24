@@ -20,6 +20,7 @@ namespace Auction
         {
             products = new List<Product>();
             id = 1;
+            AddTestingProducts();
         }
 
         /// <summary>
@@ -52,6 +53,18 @@ namespace Auction
             throw new ArgumentException("No product by that id");
         }
 
+        /// <summary>
+        /// Creates and adds products to list for testing
+        /// </summary>
+        public void AddTestingProducts()
+        {
+            AddProduct(new Product(id, "Tooth Brush"));
+            id++;
+            AddProduct(new Product(id, " McAdams dog food"));
+            id++;
+            AddProduct(new Product(id, "Cat nip donut"));
+            id++;
+        }
 
 
         /// <summary>
