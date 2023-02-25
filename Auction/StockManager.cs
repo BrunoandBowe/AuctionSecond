@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,6 +16,8 @@ namespace Auction
         private List<Product> products;
         // used to initalise Product objects with this param
         private int id;
+        // the list of orders
+        private List<Order> orders = new List<Order>();
 
         public StockManager()
         {
@@ -73,6 +76,11 @@ namespace Auction
         public List<Product> Products
         {
             get { return products;}
+        }
+
+        public List<Order> Orders
+        {
+            get { return orders; }
         }
 
     }
