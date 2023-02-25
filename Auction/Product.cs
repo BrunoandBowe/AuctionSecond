@@ -59,9 +59,10 @@ namespace Auction
         /// <param name="amountToTakeOff"> The amount to take of the stcok </param>
         public void DecreaseQuantity(int amountToTakeOff)
         {
+            // check that amount would not take quantity to below 0
             int quantityCheck = Quantity;
             {   //check amount would not take stock level to below 0
-                if(quantityCheck - amountToTakeOff > 0)
+                if(quantityCheck - amountToTakeOff >= 0)
                 {
                     Quantity -= amountToTakeOff;
                 }
@@ -84,7 +85,7 @@ namespace Auction
             get { return quantity; }
             set
             {
-                if(value > 0)
+                if(value >= 0)
                 {
                     quantity = value;
                 }

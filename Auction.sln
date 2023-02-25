@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auction", "Auction\Auction.csproj", "{85741994-0433-47C6-9B37-9C0568825DFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auction", "Auction\Auction.csproj", "{85741994-0433-47C6-9B37-9C0568825DFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionUnitTests", "AuctionUnitTests\AuctionUnitTests.csproj", "{11648348-8E32-471D-AF0D-9F305D3E8829}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{85741994-0433-47C6-9B37-9C0568825DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85741994-0433-47C6-9B37-9C0568825DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85741994-0433-47C6-9B37-9C0568825DFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11648348-8E32-471D-AF0D-9F305D3E8829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11648348-8E32-471D-AF0D-9F305D3E8829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11648348-8E32-471D-AF0D-9F305D3E8829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11648348-8E32-471D-AF0D-9F305D3E8829}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
