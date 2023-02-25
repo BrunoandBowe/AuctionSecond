@@ -16,8 +16,7 @@ namespace Auction
         private List<Product> products;
         // used to initalise Product objects with this param
         private int id;
-        // the list of orders
-        private List<Order> orders = new List<Order>();
+        
 
         public StockManager()
         {
@@ -78,10 +77,7 @@ namespace Auction
             get { return products;}
         }
 
-        public List<Order> Orders
-        {
-            get { return orders; }
-        }
+
 
     }
 }
