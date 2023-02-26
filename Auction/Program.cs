@@ -17,7 +17,12 @@ namespace Auction
 
         }
 
-
+       // AddProduct(new Product(id, "Tooth Brush"));
+          //  id++;
+          //  AddProduct(new Product(id, " McAdams dog food"));
+          //  id++;
+          //  AddProduct(new Product(id, "Cat nip donut"));
+          //  id++;
 
 
 

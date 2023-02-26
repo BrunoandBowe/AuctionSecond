@@ -97,11 +97,17 @@ namespace Auction
         /// </summary>
         public void AddTestingProducts()
         {
-            AddProduct(new Product(id, "Tooth Brush"));
+            Product ToothBrush = new Product(id, "Tooth Brush");
+            ToothBrush.IncreaseQuantity(50);
+            Products.Add(ToothBrush);
             id++;
-            AddProduct(new Product(id, " McAdams dog food"));
+            Product DogFood = new Product(id, " McAdams dog food");
+            DogFood.IncreaseQuantity(50);
+            Products.Add(DogFood);
             id++;
-            AddProduct(new Product(id, "Cat nip donut"));
+            Product catnip = new Product(id, "Cat nip donut");
+            catnip.IncreaseQuantity(50);
+            Products.Add(catnip);
             id++;
         }
 
