@@ -38,6 +38,22 @@ namespace Auction
             Quantity = 0;
         }
 
+        /// <summary>
+        /// Used to perform a deep copy of this object
+        /// When peformed will point to a diffrent
+        /// object refrence but with the same fields values 
+        /// </summary>
+        /// <returns></returns>
+        public Product DeepCopy()
+        {
+            Product other = (Product)this.MemberwiseClone();
+            other.ID = this.ID;
+            other.Name = this.Name;
+            other.Quantity = this.Quantity;
+            return other;
+        }
+
+
         public override string ToString()
         {
             return "Product " + Name + " with ID of: " + ID + 
