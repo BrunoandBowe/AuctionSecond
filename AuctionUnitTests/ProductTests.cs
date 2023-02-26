@@ -65,6 +65,55 @@ namespace AuctionUnitTests
         }
 
 
+        /// <summary>
+        /// Ensures that when creating a deep copy of a Product object
+        /// That you can change the orignal product without independantly of the other 
+        /// </summary>
+        [TestMethod]
+        public void TestDeepCopyQuantity()
+        {
+            // Arrange so create the testing products 
+            StockManager stockManager = new StockManager();
+            // the product to do a deep copy of
+            Product catnip = new Product(1, "catnip");
+
+
+            // Act 
+            catnip.IncreaseQuantity(50);
+            Product catnipOrderProduct = stockManager.GetOrderProduct(catnip, 15);
+
+            // Assert 
+            // These two should not be equal 
+            Assert.AreNotEqual(catnip.Quantity, catnipOrderProduct.Quantity);
+            
+
+        }
+
+
+        /// <summary>
+        /// Test that after ordering a product from get order product
+        /// The Quantity is correct after substracting the amount of that
+        /// product the user ordered 
+        /// </summary>
+        [TestMethod]
+        public void TestQuantityAfterOrder()
+        {
+            // Arrange so create the testing products 
+            StockManager stockManager = new StockManager();
+            // the product to do a deep copy of
+            Product catnip = new Product(1, "catnip");
+
+
+            // Act 
+            catnip.IncreaseQuantity(50);
+            Product catnipOrderProduct = stockManager.GetOrderProduct(catnip, 15);
+
+            //Assert
+            // If deep copy works original catnip should be 35
+
+            Assert.AreEqual(catnip.Quantity, 35);
+        }
+
 
     }
 
